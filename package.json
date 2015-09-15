@@ -1,0 +1,14 @@
+{
+  "name": "the-gulps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
