@@ -1,164 +1,16 @@
-/* things ... here */
+@import "bourbon";
+@import "config";
 
-/*=== RESET TO INTUITIVE BOX LAYOUT === */
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-/*=== ICONS === */
-@font-face {
-  font-family: "avengers_creative_icons";
-  src: url("/fonts/avengers_creative_icons.eot?nvpozf");
-  src: url("/fonts/avengers_creative_icons.eot?#iefixnvpozf") format("embedded-opentype"), url("/fonts/avengers_creative_icons.ttf?nvpozf") format("truetype"), url("/fonts/avengers_creative_icons.woff?nvpozf") format("woff"), url("/fonts/avengers_creative_icons.svg?nvpozf#avengers_creative_icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-[class^="icon-"], [class*=" icon-"] {
-  font-family: "avengers_creative_icons";
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /*=== BETTER FONT RENDERING === */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-big {
-  font-size: 3em;
-  background-color: white;
-  color: black;
-  width: 100%;
-  border-radius: 50%;
-  padding: 1.25rem 1.25rem;
-}
-
-.icon-cog:before {
-  content: "\e600";
-}
-
-.icon-lab:before {
-  content: "\e601";
-}
-
-.icon-brush:before {
-  content: "\e602";
-}
-
-.icon-pin:before {
-  content: "\e603";
-}
-
-.icon-mail:before {
-  content: "\e604";
-}
-
-.icon-mobile:before {
-  content: "\e605";
-}
-
-.s-icon-circle {
-  text-decoration: none;
-  color: #fd6632;
-  font-size: 3.25rem;
-  padding: 10%;
-  margin: auto;
-}
-
-.s-icon-circle:hover {
-  color: #0b9ce0;
-}
-
-.icon-circle-right {
-  order: 3;
-}
-
-.icon-circle-right:before {
-  content: "\e606";
-}
-
-.icon-circle-left {
-  order: 1;
-}
-
-.icon-circle-left:before {
-  content: "\e607";
-}
-
-.icon-social {
-  text-decoration: none;
-  font-size: 2rem;
-  padding: 1%;
-}
-
-.icon-google-plus2 {
-  color: #fabc00;
-}
-
-.icon-google-plus2:before {
-  content: "\e608";
-}
-
-.icon-facebook2 {
-  color: #3b5998;
-}
-
-.icon-facebook2:before {
-  content: "\e609";
-}
-
-.icon-twitter2 {
-  color: #00aced;
-}
-
-.icon-twitter2:before {
-  content: "\e60a";
-}
-
-.icon-dribbble2 {
-  color: #dd2667;
-}
-
-.icon-dribbble2:before {
-  content: "\e60b";
-}
-
-.icon-linkedin {
-  color: #007bb5;
-}
-
-.icon-linkedin:before {
-  content: "\e60c";
-}
-
-/*=== FONTS === */
-@font-face {
-  font-family: "Helvetica";
-}
-
-
-@font-face {
-  font-family: "open_sanssemibold";
-  src: url("opensans-semibold-webfont.eot");
-  src: url("opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("opensans-semibold-webfont.woff2") format("woff2"), url("opensans-semibold-webfont.woff") format("woff"), url("opensans-semibold-webfont.ttf") format("truetype"), url("opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+@import "reset";
+@import "lib/utils/INDEX";
+@import "typography";
 
 
 /*=== LAYOUT === */
-body {
-  width: 100%;
-  margin: 0;
-  text-align: center;
+
+
+.block {
+  font-size: em(12);
 }
 
 .nav-toggle {
@@ -628,6 +480,11 @@ progress::-webkit-progress-value {
 }
 
 /*=== FORM === */
+input[type='text'] {
+  color: map-get($text-input, color);
+  font-size: map-get($text-input, font-size) + map-get($text-input, border-color);
+}
+
 label {
   display: inline-block;
 }

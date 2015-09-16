@@ -9,7 +9,9 @@ gulp.task('build:css', function() {
   gulp.src('./scss/{,*/}*.{scss,sass}')
     .pipe(sourcemaps.init())
     .pipe(sass({
-      errLogToConsole: true
+      errLogToConsole: true,
+      outputStyle: 'expanded', //alt options: nested, compact, compressed
+      includePaths: require('node-bourbon').includePaths
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./css'));
