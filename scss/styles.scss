@@ -80,8 +80,6 @@
   content: " ";
   background-color: white;
   margin-top: -2.1em;
-  -moz-clip-path: none;
-  -webkit-clip-path: polygon(50% 60%, 40% 0, 60% 0);
   clip-path: polygon(50% 60%, 40% 0, 60% 0);
 }
 
@@ -91,7 +89,6 @@
   content: " ";
   background-color: #fd6632;
   margin-top: -2.1em;
-  -webkit-clip-path: polygon(50% 60%, 40% 0, 60% 0);
   clip-path: polygon(50% 60%, 40% 0, 60% 0);
 }
 
@@ -101,7 +98,6 @@
   content: " ";
   background-color: white;
   margin-top: -2.1em;
-  -webkit-clip-path: polygon(50% 60%, 40% 0, 60% 0);
   clip-path: polygon(50% 60%, 40% 0, 60% 0);
 }
 
@@ -111,7 +107,6 @@
   content: " ";
   background-color: #252629;
   margin-top: -2.1em;
-  -webkit-clip-path: polygon(50% 60%, 40% 0, 60% 0);
   clip-path: polygon(50% 60%, 40% 0, 60% 0);
 }
 
@@ -766,4 +761,22 @@ input, textarea {
     font-size: 1.5em;
     padding: 0;
   }
+}
+
+
+
+// this file is to ensure that auto-prefixer is working correctly
+
+@keyframes foo {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#foobar {
+  display: flex;
+  animation: spin 800ms steps(6) 0s infinite both;
+  transform: rotate(-60deg);
+  user-select: none !important;
+  cursor: grab;
+  hyphens: auto;
 }

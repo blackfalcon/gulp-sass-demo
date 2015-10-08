@@ -1,8 +1,9 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    autoprefixer = require('gulp-autoprefixer');
 
 // Gulp Sass Task
 gulp.task('build:css', function() {
@@ -13,6 +14,10 @@ gulp.task('build:css', function() {
       outputStyle: 'expanded', //alt options: nested, compact, compressed
       includePaths: require('node-bourbon').includePaths
     }))
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+          cascade: false
+        }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./css'));
 });
