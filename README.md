@@ -47,6 +47,26 @@ includePaths: require('node-bourbon').includePaths
 Now in your Sass, simple refer to the lib via `@import "bourbon"` and profit!
 
 
+#### Autoprefixer
+
+If you are not using Autoprefixer, what are you waiting for? This really is the best solution ever for dealing with vendor prefixing support. 
+
+In this repo, there are two examples of how to use this with your project. There is a stand-alone version, `gulp-autoprefixer` and then there is the version that is scoped within the `posts` function. Read the comments in the `gulp file.js` for details. 
+
+For the standalone: 
+
+```
+.pipe(gulpautoprefixer({ browsers: ['last 4 versions'], cascade: false }))
+```
+
+Within the Postcss function scope:
+
+```
+.pipe(postcss([
+  autoprefixer({ browsers: ['last 4 versions'], cascade: false })
+]))
+```
+
 #### Sourcemaps
 
 ```
